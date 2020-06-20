@@ -41,7 +41,7 @@ export class DownUpExcelPage implements OnInit {
     return new Promise(async resolve => {
       try {
         // ghi lại bản đồ chiến lược xuống mẫu này
-        let result = await this.apiStrategyMap.processStrategyDinh('', ws, config)
+        let result = await this.apiStrategyMap.processStrategyDinh(ws, config)
         resolve({ status: "OK", message: "Xử lý thành công", count: result.count })
       } catch (e) {
         console.log("Lỗi xử lý dữ liệu callback process", e);

@@ -8,14 +8,14 @@ export class ApiStrategyMapService {
 
   constructor() { }
 
-  processStrategyDinh(urlMap: string, ws: Excel.Worksheet, config: any) {
+  processStrategyDinh(ws: Excel.Worksheet, config: any) {
     return new Promise(async (resolve, reject) => {
       try {
 
         let row = ws.getRow(2);
 
         row.getCell(config.id.value).value = 2;
-        row.getCell(config.name.value).value = 'Lê Thị Hoa';
+        row.getCell(config.name.value).value = 'Lê Thị Hương Hoa';
 
         resolve({ status: "OK", count: 1 })
       } catch (e) {

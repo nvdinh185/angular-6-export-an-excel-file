@@ -11,26 +11,6 @@ app.use((req, res, next) => {
     next();
 });
 
-/* app.get('/*', (req, res) => {
-    let fileRead = req.url
-    console.log(fileRead);
-    let contentType = 'image/jpeg';
-    if (mime.lookup(fileRead)) contentType = mime.lookup(fileRead);
-    // console.log(contentType);
-
-    fs.readFile(__dirname + fileRead, { encoding: 'utf-8', flag: 'r' },
-        (error, data) => {
-            if (!error) {
-                res.writeHead(200, { 'Content-Type': contentType });
-                console.log(data.length);
-                res.end(data);
-            } else {
-                res.writeHead(404, { 'Content-Type': 'text/html' });
-                res.end(JSON.stringify(error));
-            }
-        });
-}); */
-
 app.use('/db', require('./routes/resorce-route'));
 
-app.listen(3000, () => console.log("Server is running!"));
+app.listen(3000, () => console.log("Server is running in port 3000!"));
