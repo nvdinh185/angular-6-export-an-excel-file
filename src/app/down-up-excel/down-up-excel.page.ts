@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiDownloadService } from '../services/api-download.service';
+import { ApiStrategyMapService } from '../services/api-strategy-map.service';
 
 // thành phần xuất excel từ client
-import * as xlsx from 'xlsx';
 import * as Excel from "exceljs";
-import { ApiStrategyMapService } from '../services/api-strategy-map.service';
 
 let config = {
   sheet_name: { type: "select", value: "1.Sheet của Định", options: [{ value: "0.Sheet của Định", name: "0.Sheet của Định" }], name: "Tên sheet bộ chỉ số KPI", validators: [{ required: true }] }

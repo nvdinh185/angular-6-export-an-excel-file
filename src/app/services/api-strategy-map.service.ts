@@ -9,7 +9,7 @@ export class ApiStrategyMapService {
   constructor() { }
 
   processStrategyDinh(ws: Excel.Worksheet, config: any) {
-    return new Promise(async (resolve, reject) => {
+    return new Promise((resolve, reject) => {
       try {
 
         let row = ws.getRow(2);
